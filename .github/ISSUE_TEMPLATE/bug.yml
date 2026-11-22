@@ -1,0 +1,42 @@
+name: "Bug report"
+description: Something in the app does not work as it should.
+labels: ["bug"]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do? Number each step.
+      placeholder: |
+        1. Click "Edit" on the "Sleep" task
+        2. Delete all the text
+        3. Click "Save"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What happened instead? Add a screenshot or the error from the browser console if there is one.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and operating system
+      placeholder: Chrome 140 on Windows 11
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Branch or commit
+      description: Run `git log --oneline -1` and paste the result.
+      placeholder: "3fd2cd05 refactor: destructure props in every component"
